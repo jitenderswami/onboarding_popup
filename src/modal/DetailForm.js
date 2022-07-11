@@ -9,7 +9,8 @@ import RadioForm from './RadioForm.js'
 
 const DetailForm = () => {
 
-  const{userName,setUserName,page,SelectedRadio} = useGlobalContext()
+  const{userName,setUserName,
+    page,SelectedRadio,finalobject} = useGlobalContext()
 
   return (
     <form className='userform'>
@@ -24,7 +25,10 @@ const DetailForm = () => {
                 </>}
           </>
         )}
-        <PrimaryButton />
+
+        { page <= 2 && <PrimaryButton /> }
+
+        {page >= 3 && <>Form Submitted!</>}
       
     </form>
   )

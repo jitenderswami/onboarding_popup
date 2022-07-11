@@ -11,7 +11,7 @@ function PrimaryButton() {
   const handleButton = (e) =>{
     e.stopPropagation();
     e.preventDefault(e);
-    setPage(2) 
+    setPage(page => page+1) 
   }
   return (
         <button  disabled={buttonDisabled} className='primarybutton' onClick={handleButton}> {btext}</button>

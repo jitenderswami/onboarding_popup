@@ -1,44 +1,25 @@
 import React from 'react'
 import { useGlobalContext } from '../Context.js'
 
-function RadioButton({logo,heading,des}) {
+function RadioButton({plan,handleClick}) {
 
-  const {setSelectedRadio,
-    setCompanyName,
-    setHireForName,
-    setconsultancyName} = useGlobalContext()
-
-  const handleClick = (e) =>{
-    // console.log(e.target);
-    if(e.target.id === "My Own Company"){
-
-      setHireForName("")
-      setconsultancyName("")
-
-
-    } else if(e.target.id === "My clients"){
-        setCompanyName("")
-
-
-    }
-
-    setSelectedRadio(e.target.id)
-
-  }
-
+  const {radio,selectedRadio} = useGlobalContext()
 
   return (
     <div className='tile'>
-      <div className='tile-content'>
-      <input onClick={handleClick} type="radio" name="hiriingfor" id={heading} />
-          <div className='radio-detail'>
-            <div className="icon">
-              <img src={logo} alt="logo" />
-              <p>{heading}</p>
+      <div  className='tile-content'>
+        <label onClick={() => handleClick(plan)} className='radio-overlay'>
+          <input  type="radio" name="hiriingfor" />
+            <div className='radio-detail'>
+              <div className="icon">
+                <img src={plan.logo} alt="logo" />
+                <p>{plan.heading}</p>
+              </div>
+              <p className='icon-des'>{plan.des}</p>
             </div>
-            <p className='icon-des'>{des}</p>
-          </div>
-        </div>
+
+        </label>
+      </div>
     </div>
 
   )
