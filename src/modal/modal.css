@@ -21,6 +21,40 @@
     background: #FFFFFF;
     
 }
+.back{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+}
+.back img{
+    width: 10px;
+    height: 10px;
+}
+
+.back span{
+    width: 31px;
+    height: 20px;
+
+    /* Subtitle 2 - Medium */
+
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    /* Dark Neutrals/Neutral-800 */
+
+    color: #172B4D;
+
+
+}
 .header{
     display: flex;
     flex-direction: column;
@@ -120,7 +154,7 @@
 }
 
 .inputfield label {
-    width: 149px;
+    width: 100%;
     height: 20px;
 
     /* Subtitle 2 - Medium */
@@ -153,7 +187,7 @@
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 12px;
     gap: 10px;
 
@@ -173,6 +207,19 @@
     flex-grow: 0;
 
 }
+
+.inputfield input:hover{
+    border: 1px solid #5E6C84;
+}
+
+.inputfield input:focus{
+    border: 2px solid #388BF2;
+
+}
+.inputfield input:active{
+    border: 1px solid #B3BAC5;
+
+}
 .options{
     display: flex;
     flex-direction: column;
@@ -182,6 +229,7 @@
 }
 
 .tile{
+    cursor: pointer;
     display: flex;
     /* flex-direction: row; */
     align-items: flex-start;
@@ -191,6 +239,21 @@
     border: 1px solid #DFE1E6;
     border-radius: 8px;
 
+}
+
+.tile:hover{
+    background: #F4F5F7;
+    /* Light Neutrals/Neutral-200 */
+
+    border: 1px solid #DFE1E6;
+    border-radius: 8px;
+
+
+}
+
+.tile:focus{
+    border: 2px solid #388BF2;
+    border-radius: 8px;
 }
 
 .tile-content{
@@ -322,41 +385,43 @@
     padding: 12px 16px;
     gap: 10px;
 
-    /* position: absolute;
-    width: 328px;
-    height: 48px;
-    left: 16px;
-    top: 304px; */
-
-    /* Light Neutrals/Neutral-200 */
-
-    background: #DFE1E6;
+    background: #2BB792;
     border-radius: 4px;
 
-}
-
-.primarybutton span{
-    width: 66px;
-    height: 24px;
-
-    /* Subtitle 1 - SemiBold */
-
+    color: #FFFFFF;
     font-family: 'Fira Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
+
+}
+
+.primarybutton:hover{
+    background: #1F8268;
+
+}
 
 
-    /* Mid Neutrals/Neutral-400 */
+.primarybutton:disabled{
+    background: #DFE1E6;
+    border-radius: 4px;
 
     color: #B3BAC5;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
 
 
-    /* Inside auto layout */
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+
 }
+

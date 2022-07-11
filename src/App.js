@@ -1,11 +1,14 @@
 import './App.css';
+import { AppProvider } from './Context';
 import Modal from './modal/Modal';
 
 function App() {
   return (
-    <div className="App">
-      <Modal></Modal>
+    <AppProvider>
+      <div className="App">
+        <Modal></Modal>
     </div>
+    </AppProvider>
   );
 }
 
