@@ -1,6 +1,6 @@
 import React from 'react'
-import { useGlobalContext } from '../Context'
-import InputField from './InputField'
+import { useGlobalContext } from '../Context.js'
+import InputField from './InputField.js'
 
 function RadioForm() {
   const{SelectedRadio,

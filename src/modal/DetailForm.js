@@ -1,10 +1,10 @@
 import React from 'react'
-import { useGlobalContext } from '../Context'
-import CompanySize from './CompanySize'
-import InputField from './InputField'
-import Options from './Options'
-import PrimaryButton from './PrimaryButton'
-import RadioForm from './RadioForm'
+import { useGlobalContext } from '../Context.js'
+import CompanySize from './CompanySize.js'
+import InputField from './InputField.js'
+import Options from './Options.js'
+import PrimaryButton from './PrimaryButton.js'
+import RadioForm from './RadioForm.js'
 
 
 const DetailForm = () => {

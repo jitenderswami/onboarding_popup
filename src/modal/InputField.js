@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGlobalContext } from '../Context'
+
 
 function InputField({value,setValue,label,placeholder}) {
 

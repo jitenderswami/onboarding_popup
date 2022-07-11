@@ -1,6 +1,6 @@
 import React from 'react'
-import ApnaLogo from './ApnaLogo'
-import TextBox from './TextBox'
+import ApnaLogo from './ApnaLogo.js'
+import TextBox from './TextBox.js'
 
 const Header = () => {
   return (

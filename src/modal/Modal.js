@@ -1,8 +1,8 @@
 import React from 'react'
-import { useGlobalContext } from '../Context'
-import Back from './Back'
-import DetailForm from './DetailForm'
-import Header from './Header'
+import { useGlobalContext } from '../Context.js'
+import Back from './Back.js'
+import DetailForm from './DetailForm.js'
+import Header from './Header.js'
 import './modal.css'
 
 function Modal() {

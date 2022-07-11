@@ -1,5 +1,5 @@
 import React from 'react'
-import RadioButton from './RadioButton'
+import RadioButton from './RadioButton.js'
 import owncompany from "../logos/owncompany.svg"
 import clients from "../logos/clients.svg"
 

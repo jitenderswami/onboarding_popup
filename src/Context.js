@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState} from "react";
 
-const AppContext = React.createContext()
+const AppContext = React.createContext();
+
 const AppProvider = ({ children }) => {
 
     const [SelectedRadio, setSelectedRadio] = useState(null)
