@@ -1,10 +1,13 @@
 import React from 'react'
+import { useGlobalContext } from '../Context'
 
-function InputField({label,placeholder}) {
+function InputField({value,setValue,label,placeholder}) {
+
+
   return (
     <div className='inputfield'>
         <label htmlFor='input'>{label}</label>
-        <input placeholder={placeholder} type="text" name="" id="input" />
+        <input value={value} onChange={e => (setValue(e.target.value))} placeholder={placeholder} type="text" name="" id="input" />
 
       
     </div>

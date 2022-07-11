@@ -2,10 +2,12 @@ import React from 'react'
 import { useGlobalContext } from '../Context'
 
 function PrimaryButton() {
-  const {page,setPage} = useGlobalContext()
+  const {page,setPage,buttonDisabled,finalobject} = useGlobalContext()
+
+  console.log(finalobject);
   let btext
 
-  if(page==1){btext="Continue"}else{btext="Continue to post a job"}
+  if(page===1){btext="Continue"}else{btext="Continue to post a job"}
 
   const handleButton = (e) =>{
     e.stopPropagation();
@@ -13,7 +15,7 @@ function PrimaryButton() {
     setPage(2) 
   }
   return (
-        <button  className='primarybutton' onClick={handleButton}> {btext}</button>
+        <button  disabled={buttonDisabled} className='primarybutton' onClick={handleButton}> {btext}</button>
   )
 }
 

@@ -8,12 +8,13 @@ import RadioForm from './RadioForm'
 
 
 const DetailForm = () => {
-  const{page,setPage,SelectedRadio,setSelectedRadio} = useGlobalContext()
+
+  const{userName,setUserName,page,SelectedRadio} = useGlobalContext()
 
   return (
     <form className='userform'>
-        {page === 1 && (<InputField label={"What's Your Name"} placeholder ={"Your Name"}/>)}
-        {page == 2 && (
+        {page === 1 && (<InputField setValue={setUserName} value={userName} label={"What's Your Name"} placeholder ={"Your Name"}/>)}
+        {page === 2 && (
           <>
               <Options />
               {SelectedRadio && 
