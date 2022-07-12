@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
 
   const[companySize, setCompanySize] = useState(0)  
-  const [SelectedRadio, setSelectedRadio] = useState(null);
+  const [SelectedRadio, setSelectedRadio] = useState();
   const [page, setPage] = useState(1);
   const [buttonDisabled, setbuttonDisabled] = useState(true);
 
@@ -18,11 +18,11 @@ const AppProvider = ({ children }) => {
   const [consultancyWebsite, setConsultancyWebsite] = useState("");
 
   const finalobject = {
-    username: { userName },
-    companyname: { companyName },
-    hireforname: { hireForName },
-    consultancyname: { consultancyName },
-    companysize:{companySize}
+    username: userName ,
+    companyname: companyName ,
+    hireforname: hireForName ,
+    consultancyname: consultancyName ,
+    companysize: companySize
   };
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const AppProvider = ({ children }) => {
     if(page >=3){
         console.log(finalobject)
     }
-  })
+  },[page])
 
   return (
     <AppContext.Provider

@@ -18,6 +18,8 @@ const DetailForm = () => {
         {page === 2 && (
           <>
               <Options />
+
+
               {SelectedRadio && 
                 <>
                   <RadioForm />

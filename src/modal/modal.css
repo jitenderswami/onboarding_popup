@@ -24,6 +24,7 @@
     
 }
 .back{
+    height: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -255,6 +256,19 @@
 
 }
 
+.tileactive{
+
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 24px 16px 16px;
+    gap: 10px;
+    background: #FFFFFF;
+    border: 2px solid #388BF2;;
+    border-radius: 8px;
+
+}
+
 .tile:hover{
     background: #F4F5F7;
 
@@ -264,10 +278,6 @@
 
 }
 
-.tile:focus{
-    border: 2px solid #388BF2;
-    border-radius: 8px;
-}
 
 .tile-content{
     display: flex;
@@ -275,6 +285,18 @@
     /* padding: 18px 16px; */
     gap: 8px;
 
+}
+
+.tile input[type = "radio"]{
+    cursor: pointer;
+}
+
+
+.tileactive input[type="radio"]{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #388BF2;
+    color:  #388BF2;
 }
 
 
@@ -291,13 +313,6 @@
     gap: 10px;
     width: 100%;
     height: auto;
-}
-.radio-overlay input[type="radio" i] {
-    background-color: #5E6C84;
-    cursor: pointer;
-}
-.radio-overlay input[type="radio" i]:checked{
-    background-color: #388BF2;;
 }
 
 .icon{
@@ -358,15 +373,6 @@
 
 }
 
-.companysize span{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 4px;
-
-}
-
 .sizebuttons{
     display: flex;
     flex-direction: row;
@@ -375,7 +381,7 @@
     gap: 8px;
 }
 
-.sizebuttons button{
+.sizebuttons .button{
     box-sizing: border-box;
 
     display: flex;
@@ -385,11 +391,6 @@
     padding: 10px 12px;
     gap: 10px;
 
-    /* position: absolute;
-    width: 49px;
-    height: 32px;
-    left: 56px;
-    top: 620px; */
 
     background: #FFFFFF;
 
@@ -397,7 +398,25 @@
     border-radius: 8px;
 }
 
-.sizebuttons button:focus{
+
+.buttonactive{
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 10px;
+
+    background: #EBF3FE;
+    border: 2px solid #388BF2;
+    border-radius: 8px;
+
+}
+
+/* .sizebuttons button:focus{
 
     background: #EBF3FE;
     border: 2px solid #388BF2;
@@ -407,7 +426,7 @@
 .sizebuttons button:hover{
     background: #F4F5F7;
 
-}
+} */
 
 
 
@@ -486,10 +505,24 @@
 
 }
 
+.optional{
+
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+
+    color: #5E6C84;
+
+
+}
 
 
 
-@media only screen and (min-width: 500px) {
+
+@media screen and (min-width: 768px) {
     /* For desktop: */
     .modal{
         

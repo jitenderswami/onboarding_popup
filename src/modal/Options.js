@@ -8,6 +8,7 @@ import { useGlobalContext } from '../Context.js'
 function Options() {
 
   const {radio,
+    selectedRadio,
     setSelectedRadio,
     setCompanyName,
     setHireForName,
@@ -33,20 +34,8 @@ function Options() {
 
   const handleClick = (plan) =>{
 
-  
-    if(plan.id === 1){
-
-      setHireForName("")
-      setconsultancyName("")
-
-
-    } else if(plan.id === 2){
-        setCompanyName("")
-
-
-    }
-
     setSelectedRadio(plan.id)
+
 
   }
 

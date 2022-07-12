@@ -15,16 +15,16 @@ function RadioForm() {
     <>
         {SelectedRadio === 1 && (
             <>
-           <InputField value={companyName} setValue={setCompanyName} label={"Your company name"} placeholder ={"Example: apna"}/>
-           <InputField value={companyWebsite} setValue={setCompanyWebsite} label={"Company Website"} placeholder={"Example: www.companyname.com"}/>
+           <InputField isoptional={false} value={companyName} setValue={setCompanyName} label={"Your company name"} placeholder ={"Example: apna"}/>
+           <InputField  isoptional={true}value={companyWebsite} setValue={setCompanyWebsite} label={"Company Website"} placeholder={"Example: www.companyname.com"}/>
            </>
 
         )}
         {SelectedRadio === 2 && (
           <>
-          <InputField value={hireForName} setValue={setHireForName} label={"Clients you normally hire for"} placeholder={"Example: Swiggy, Zomato, Flipkart"}/>
-          <InputField value={consultancyName} setValue={setconsultancyName} label={"Your consultancy name"} placeholder={"Example: Abc consultancy"}/>
-          <InputField value={consultancyWebsite} setValue={setConsultancyWebsite} label={"Consultancy website"} placeholder={"Example: www.abc.com "}/>
+          <InputField isoptional={false}value={hireForName} setValue={setHireForName} label={"Clients you normally hire for"} placeholder={"Example: Swiggy, Zomato, Flipkart"}/>
+          <InputField isoptional={true} value={consultancyName} setValue={setconsultancyName} label={"Your consultancy name"} placeholder={"Example: Abc consultancy"}/>
+          <InputField isoptional={true} value={consultancyWebsite} setValue={setConsultancyWebsite} label={"Consultancy website"} placeholder={"Example: www.abc.com "}/>
           </>
         )}
     </>
