@@ -5,7 +5,7 @@ const TextBox = () => {
   const {page} = useGlobalContext()
   let h,d
   if(page===1){
-    h = "Welcome"
+    h = "Welcome!"
     d = "Since this is your first job posting, let’s setup your company account."
   } else{
 

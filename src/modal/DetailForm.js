@@ -14,7 +14,7 @@ const DetailForm = () => {
 
   return (
     <form className='userform'>
-        {page === 1 && (<InputField setValue={setUserName} value={userName} label={"What's Your Name"} placeholder ={"Your Name"}/>)}
+        {page === 1 && (<InputField setValue={setUserName} value={userName} label={"What is your full name?"} placeholder ={"Example: Ramadugu Rakesh Kumar"}/>)}
         {page === 2 && (
           <>
               <Options />
