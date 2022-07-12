@@ -1,28 +1,9 @@
 import React from 'react'
-import { useGlobalContext } from '../Context';
+import { useGlobalContext } from '../../Context';
+import { companySizeList } from '../util/data';
 
 function CompanySize() {
   const {setCompanySize,companySize} = useGlobalContext()
-
-  const companySizeList  = [
-  
-                    { id:1,
-                      size:"1-10"
-                    },
-                    { id:2,
-                      size:"10-50"
-                    },
-                    { id:3,
-                      size:"50-200"
-                    },
-                    { id:4,
-                      size:"200-500"
-                    },
-                    { id:5,
-                      size:"500+"
-                    },
-
-  ]
 
 
   const handleSize = (e) => {
@@ -32,7 +13,7 @@ function CompanySize() {
   }
   return (
     <div className='companysize'>
-        <label>Number of employees in your company<span className='optional'>(optional)</span></label>
+        <label>Number of employees in your company<span className='optional'>{` (optional)`}</span></label>
         <div className="sizebuttons">
 
           {companySizeList.map((button) => {

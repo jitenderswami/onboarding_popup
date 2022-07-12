@@ -5,16 +5,16 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
 
   const[companySize, setCompanySize] = useState(0)  
-  const [SelectedRadio, setSelectedRadio] = useState();
+  const [selectedPlanRadio, setSelectedPlanRadio] = useState();
   const [page, setPage] = useState(1);
-  const [buttonDisabled, setbuttonDisabled] = useState(true);
+  const [primaryButtonDisabled, setPrimaryButtonDisabled] = useState(true);
 
   const [userName, setUserName] = useState("");
   const [companyWebsite, setCompanyWebsite] = useState("");
 
   const [companyName, setCompanyName] = useState("");
   const [hireForName, setHireForName] = useState("");
-  const [consultancyName, setconsultancyName] = useState("");
+  const [consultancyName, setConsultancyName] = useState("");
   const [consultancyWebsite, setConsultancyWebsite] = useState("");
 
   const finalobject = {
@@ -28,28 +28,28 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     {
       userName && page === 1
-        ? setbuttonDisabled(false)
-        : setbuttonDisabled(true);
+        ? setPrimaryButtonDisabled(false)
+        : setPrimaryButtonDisabled(true);
     }
   }, [userName, page]);
 
   useEffect(() => {
-    if (page === 2 && SelectedRadio === 1) {
+    if (page === 2 && selectedPlanRadio=== 1) {
       {
-        companyName ? setbuttonDisabled(false) : setbuttonDisabled(true);
+        companyName ? setPrimaryButtonDisabled(false) : setPrimaryButtonDisabled(true);
       }
     }
-  }, [SelectedRadio, companyName, page]);
+  }, [selectedPlanRadio, companyName, page]);
 
   useEffect(() => {
-    if (page === 2 && SelectedRadio === 2 ) {
+    if (page === 2 && selectedPlanRadio=== 2 ) {
       {
         hireForName && consultancyName
-          ? setbuttonDisabled(false)
-          : setbuttonDisabled(true);
+          ? setPrimaryButtonDisabled(false)
+          : setPrimaryButtonDisabled(true);
       }
     }
-  }, [SelectedRadio, companyName, hireForName, consultancyName, page]);
+  }, [selectedPlanRadio, companyName, hireForName, consultancyName, page]);
 
 
   useEffect(() =>{
@@ -62,10 +62,10 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         finalobject,
-        buttonDisabled,
-        setbuttonDisabled,
-        SelectedRadio,
-        setSelectedRadio,
+        primaryButtonDisabled,
+        setPrimaryButtonDisabled,
+        selectedPlanRadio,
+        setSelectedPlanRadio,
         page,
         setPage,
         userName,
@@ -77,7 +77,7 @@ const AppProvider = ({ children }) => {
         hireForName,
         setHireForName,
         consultancyName,
-        setconsultancyName,
+        setConsultancyName,
         consultancyWebsite,
         setConsultancyWebsite,
         companySize,

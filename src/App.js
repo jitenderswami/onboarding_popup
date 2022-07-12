@@ -1,6 +1,6 @@
-import './App.css';
-import { AppProvider } from './Context.js';
-import Modal from './modal/Modal.js';
+import "./App.css";
+import { AppProvider } from "./Context.js";
+import Modal from "./modal/Modal.js";
 
 function App() {
   return (
